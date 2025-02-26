@@ -3,12 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import './styles/index.scss';
+import { RouterProvider } from 'react-router-dom';
+import { r } from './services/Router';
 
 function App() {
   return (
-    <div>
-      <h1>SCSS fungerar nu! 🎉</h1>
-    </div>
+   <>
+   <RouterProvider router={r} />
+   </>
   );
 }
 
