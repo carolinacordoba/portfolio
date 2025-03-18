@@ -1,0 +1,48 @@
+@use "./global/variables.scss" as v;
+
+nav {
+  display: flex;
+
+  width: 100vw;
+
+  margin-top: 2%;
+  align-items: center;
+
+  .logo-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 30%;
+    margin-left: 3%;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10rem;
+
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    margin-right: 3%;
+
+    list-style: none;
+
+    li a:hover {
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+      font-family: v.$font-primary;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

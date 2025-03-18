@@ -1,6 +1,6 @@
 import React from 'react'
 
-const About = () => {
+const CV = () => {
   return (
     <div>
      <h1>ABOUT</h1> 
@@ -8,4 +8,4 @@ const About = () => {
   )
 }
 
-export default About
+export default CV
