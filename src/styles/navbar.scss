@@ -1,33 +1,40 @@
 @use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
 
 nav {
-  display: flex;
+  @include m.flex(row, space-between, center);
+  width: 100%;
+  padding: 20px 5%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-  width: 100vw;
+  .nav-logo {
+    @include m.flex();
 
-  margin-top: 2%;
-  align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
 
-  .logo-name {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    img {
+      height: 50px;
+      width: auto;
+    }
 
-    width: 30%;
-    margin-left: 3%;
-
-    a {
-      text-decoration: none;
-      color: black;
+    &:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transform: scale(1.1);
+      transition: 0.3s ease;
     }
   }
 
   .nav-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10rem;
+    @include m.flex();
 
-    width: 70%;
+    gap: 5rem;
+
+    width: 100%;
     margin: 0;
     padding: 0;
     margin-right: 3%;
@@ -36,13 +43,14 @@ nav {
 
     li a:hover {
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      color: v.$color-pink; // Rosa färg ($color-pink) för hover-effekten
     }
+  }
 
-    a {
-      font-family: v.$font-primary;
-      font-size: 0.9rem;
-      text-decoration: none;
-      color: black;
-    }
+  a {
+    font-family: v.$font-primary;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: black;
   }
 }
