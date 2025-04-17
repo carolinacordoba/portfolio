@@ -14,7 +14,7 @@ const NavBar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/kontakt">Kontakt</NavLink>
+          <NavLink to="#contact">Kontakt</NavLink>
         </li>
       </ul>
     </nav>

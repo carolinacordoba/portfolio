@@ -1,0 +1,85 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.header {
+  text-align: center;
+  padding: 4rem 5%;
+  background-color: v.$color-pink-light;
+  font-family: v.$font-primary;
+
+  .header-img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: 8px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+    animation: fadeIn 1.5s ease-in-out;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .header-description {
+    font-size: 1.2rem;
+    // margin-bottom: 2rem;
+    line-height: 1.5; // Minska radavståndet
+    margin: 0 auto; // Centrera texten
+    max-width: 670px; // Begränsa max-bredden så den inte blir för bred
+    padding: 0 20px; // Lägg till padding för att ge luft på sidorna
+    text-align: center; // Te
+  }
+
+  .header-buttons {
+    @include m.flex(row, center, center, 2rem);
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+
+    .cta-button {
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &.primary {
+        background-color: v.$color-pink;
+        color: white;
+
+        &:hover {
+          background-color: darken(v.$color-pink, 10%);
+        }
+      }
+
+      &.secondary {
+        border: 2px solid v.$color-pink;
+        color: v.$color-pink;
+        background-color: transparent;
+
+        &:hover {
+          background-color: v.$color-pink;
+          color: white;
+        }
+      }
+    }
+  }
+}

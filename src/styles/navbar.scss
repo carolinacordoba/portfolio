@@ -3,12 +3,11 @@
 
 nav {
   @include m.flex(row, space-between, center);
-  width: 100%;
-  padding: 20px 5%;
-  top: 0;
-  left: 0;
+  position: relative;
+  padding: 10px 5%;
   z-index: 100;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Mjukare skugga
+  transition: box-shadow 0.3s ease;
 
   .nav-logo {
     @include m.flex();

@@ -1,0 +1,54 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.about-section {
+  @include m.flex(column, center, center); // Centrera innehåll med flexbox
+  background-color: v.$color-pink; // Rosa bakgrund
+  color: white; // Vit text
+  padding: 4rem 1.5rem; // Utrymme ovan och under
+  font-family: v.$font-primary;
+  text-align: center;
+  line-height: 1.6;
+  position: relative;
+
+  .about-intro {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .about-expanded {
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: none; // Döljer den expanderande texten från början
+    max-width: 850px;
+    opacity: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease; // Fadear in vid expansion
+    max-height: 0; // Göra den gömd när sektionen inte är expanderad
+    overflow: hidden; // Döljer överskjutande text
+  }
+
+  &.expanded .about-expanded {
+    display: block; // Gör texten synlig när sektionen är expanderad
+    opacity: 1; // Gör den opak när den expanderas
+    max-height: 500px; // Högt värde så att texten kan rymmas när expanderad
+  }
+
+  .read-more-button {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+
+    &:hover {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+    }
+  }
+}

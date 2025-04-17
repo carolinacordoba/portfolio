@@ -1,4 +1,9 @@
 @use "./styles/global/variables.scss" as v;
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: v.$font-secondary;
   font-size: 16px;

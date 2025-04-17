@@ -1,0 +1,32 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.footer {
+  @include m.flex(column, center, center);
+  padding: 25px 5%;
+  background-color: white;
+  color: black;
+  font-family: v.$font-primary;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+
+  .footer-icons {
+    @include m.flex(row, center, center, 2rem);
+
+    a {
+      color: black;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: v.$color-pink;
+      }
+    }
+  }
+
+  .footer-copy {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
