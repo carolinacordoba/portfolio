@@ -1,6 +1,5 @@
-import React from "react";
 import "../styles/cv.scss";
-import Experience from "../components/cv/experience";
+import Experience from "../components/cv/Experience";
 import Education from "../components/cv/Education";
 import SideBar from "../components/cv/SideBar";
 

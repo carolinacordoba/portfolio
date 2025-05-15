@@ -1,7 +1,6 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import "../styles/home.scss";
-import Contact from '../components/contact';
+import Contact from '../components/Contact';
 import About from '../components/About';
 
 const Home = () => {

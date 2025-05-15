@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaLinkedin, FaSquarePhone, FaGithub } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 
