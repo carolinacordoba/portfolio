@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../pages/MainLayout";
 import NotFound from "../pages/NotFound";
-import CV from "../pages/CV";
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 
