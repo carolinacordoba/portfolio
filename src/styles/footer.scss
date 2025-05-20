@@ -7,7 +7,7 @@
   background-color: white;
   color: black;
   font-family: v.$font-primary;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.02);
 
   .footer-icons {
     @include m.flex(row, center, center, 2rem);
